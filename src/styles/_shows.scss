@@ -1,0 +1,45 @@
+@use 'variaveis';
+
+.shows {
+    padding: 2vw 5.6vw;
+
+    &__list {
+        margin-top: 44px;
+        display: none;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 24px;
+
+        &--is-active {
+            display: grid;
+        }
+
+        &__item {
+
+            img {
+                max-width: 100%;
+                border-radius: 4px;
+            }
+        }
+    }
+
+    &__tabs {
+        display: flex;
+        justify-content: center;
+
+        &__button {
+            color: variaveis.$corTextoSecundaria;
+            font-size: 20px;
+            border: none;
+            background: none;
+            padding-bottom: 5px;
+            text-transform: uppercase;
+            margin: 0 1vw;
+            cursor: pointer;
+            border-bottom: 5px solid transparent; //foi adicionado essa borda transparente para o botão não ficar "pulando" quando aparecer a borda branca embaixo
+            
+            &--is-active {
+                border-color: variaveis.$corTextoSecundaria; // assim colocarmos apenas a cor na borda de baixo, até pq já existia ela, mas transparente, ai quando "ativa" via js ela aparece sem modificar o espaço do botão e seu arredor
+            }
+        }
+    }
+}

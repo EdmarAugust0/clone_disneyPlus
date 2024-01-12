@@ -8,6 +8,10 @@
     // esse de baixo tenta ocupar a tela toda com a imagem toda sem cortar ela para fora e preserva a resolução dela, ou seja, da uma enquadrada melhor 
     background-size: cover;
 
+    .button {
+        margin: 2vw 0 8px 0;
+    }
+
     &__content {
         max-width: 640px;
 
